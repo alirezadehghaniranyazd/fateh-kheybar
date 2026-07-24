@@ -26,7 +26,7 @@ export default function Hero() {
 
         {/* تصویر */}
         <div className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-xl">
+          <div className="relative aspect-4/5 overflow-hidden rounded-3xl shadow-xl">
             <Image
               src={heroImage}
               alt="باشگاه ورزشی فاتح خیبر"

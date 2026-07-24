@@ -15,7 +15,7 @@ export default function Classes() {
         کلاس‌های باشگاه فاتح خیبر برای تمامی رده‌های سنی برگزار می‌شود.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {classes.map((item) => (
           <ClassCard
             key={item.id}

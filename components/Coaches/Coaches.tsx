@@ -14,7 +14,7 @@ export default function Coaches() {
         بدنسازی.
       </p>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="mt-10 grid gap-8 md:grid-cols-2">
         {coaches.map((coach) => (
           <CoachCard
             key={coach.id}

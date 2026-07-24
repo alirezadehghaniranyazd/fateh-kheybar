@@ -20,13 +20,9 @@ export default function CoachCard({
 }: CoachCardProps) {
   return (
     <Card className="overflow-hidden">
-      <Image
-        src={image}
-        alt={name}
-        width={600}
-        height={700}
-        className="h-80 w-full object-cover"
-      />
+      <div className="relative aspect-4/5 w-full">
+        <Image src={image} alt={name} fill className="object-cover" />
+      </div>
 
       <div className="p-6">
         <h3 className="text-2xl font-bold">{name}</h3>
