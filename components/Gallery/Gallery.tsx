@@ -1,9 +1,10 @@
 import { gallery } from "@/data/gallery";
 import GalleryImage from "./GalleryImage";
+import { Section } from "@/components/ui";
 
 export default function Gallery() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <Section>
       <div className="mb-14 text-center">
         <p className="font-semibold text-emerald-600">گالری باشگاه</p>
 
@@ -28,6 +29,6 @@ export default function Gallery() {
           مشاهده همه تصاویر
         </button>
       </div>
-    </section>
+    </Section>
   );
 }

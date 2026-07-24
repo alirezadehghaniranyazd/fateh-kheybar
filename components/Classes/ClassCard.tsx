@@ -1,3 +1,5 @@
+import { Card } from "@/components/ui";
+
 type ClassCardProps = {
   title: string;
   group: string;
@@ -14,7 +16,7 @@ export default function ClassCard({
   description,
 }: ClassCardProps) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+    <Card className="p-6">
       <h3 className="mb-2 text-2xl font-bold text-slate-900">{title}</h3>
 
       <p className="mb-2 text-emerald-600 font-semibold">{group}</p>
@@ -24,6 +26,6 @@ export default function ClassCard({
       <p className="mt-2 text-sm text-slate-500">{schedule}</p>
 
       <p className="mt-5 leading-7 text-slate-600">{description}</p>
-    </div>
+    </Card>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Card } from "@/components/ui";
 
 type Props = {
   image: string;
@@ -6,7 +7,7 @@ type Props = {
 
 export default function GalleryImage({ image }: Props) {
   return (
-    <div className="overflow-hidden rounded-2xl">
+    <Card className="overflow-hidden">
       <Image
         src={image}
         alt="Gallery"
@@ -14,6 +15,6 @@ export default function GalleryImage({ image }: Props) {
         height={500}
         className="h-72 w-full object-cover transition duration-500 hover:scale-110"
       />
-    </div>
+    </Card>
   );
 }

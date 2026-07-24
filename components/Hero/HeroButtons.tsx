@@ -1,14 +1,15 @@
+import { UserPlus, ArrowLeft } from "lucide-react";
 import { hero } from "@/data/hero";
+import { Button } from "@/components/ui";
+
 export default function HeroButtons() {
   return (
     <div className="flex flex-wrap gap-4">
-      <button className="rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white transition hover:bg-emerald-700">
-        {hero.buttons.primary}
-      </button>
+      <Button icon={<UserPlus size={18} />}>{hero.buttons.primary}</Button>
 
-      <button className="rounded-xl border border-slate-300 px-6 py-3 font-medium text-slate-700 transition hover:bg-slate-100">
+      <Button variant="secondary" icon={<ArrowLeft size={18} />}>
         {hero.buttons.secondary}
-      </button>
+      </Button>
     </div>
   );
 }

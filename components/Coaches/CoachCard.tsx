@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Card } from "@/components/ui";
 
 type CoachCardProps = {
   name: string;
@@ -18,7 +19,7 @@ export default function CoachCard({
   description,
 }: CoachCardProps) {
   return (
-    <div className="overflow-hidden rounded-2xl bg-white shadow transition hover:-translate-y-1 hover:shadow-xl">
+    <Card className="overflow-hidden">
       <Image
         src={image}
         alt={name}
@@ -38,6 +39,6 @@ export default function CoachCard({
 
         <p className="mt-4 leading-7 text-slate-600">{description}</p>
       </div>
-    </div>
+    </Card>
   );
 }
