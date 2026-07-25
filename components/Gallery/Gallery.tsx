@@ -1,6 +1,6 @@
 import { gallery } from "@/data/gallery";
 import GalleryImage from "./GalleryImage";
-import { Section } from "@/components/ui";
+import { Button, Section } from "@/components/ui";
 
 export default function Gallery() {
   return (
@@ -18,16 +18,14 @@ export default function Gallery() {
         </p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {gallery.map((item) => (
           <GalleryImage key={item.id} image={item.image} />
         ))}
       </div>
 
       <div className="mt-12 text-center">
-        <button className="rounded-xl bg-emerald-600 px-8 py-4 font-semibold text-white transition hover:bg-emerald-700">
-          مشاهده همه تصاویر
-        </button>
+        <Button>مشاهده همه تصاویر</Button>
       </div>
     </Section>
   );

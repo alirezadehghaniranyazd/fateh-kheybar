@@ -1,8 +1,15 @@
+import Image from "next/image";
+
 export default function Logo() {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-600 text-lg font-bold text-white">
-        ف
+      <div className="relative h-11 w-11 overflow-hidden rounded-full">
+        <Image
+          src="/images/logo/logo.jpg"
+          alt="باشگاه ورزشی فاتح خیبر"
+          fill
+          className="object-cover"
+        />
       </div>
 
       <div>
@@ -10,9 +17,7 @@ export default function Logo() {
           باشگاه ورزشی فاتح خیبر
         </h1>
 
-        <p className="text-xs text-slate-500">
-          قدرت • انضباط • سلامتی
-        </p>
+        <p className="text-xs text-slate-500">قدرت • انضباط • سلامتی</p>
       </div>
     </div>
   );

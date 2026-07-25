@@ -1,5 +1,5 @@
 import { contact } from "@/data/contact";
-import { Section } from "@/components/ui";
+import { Button, Section } from "@/components/ui";
 import ContactCard from "./ContactCard";
 
 export default function Contact() {
@@ -17,7 +17,7 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="mt-12 grid gap-8 md:grid-cols-3">
         {contact.cards.map((item) => (
           <ContactCard
             key={item.id}
@@ -29,9 +29,7 @@ export default function Contact() {
       </div>
 
       <div className="mt-10 text-center">
-        <button className="rounded-xl bg-emerald-600 px-8 py-4 font-semibold text-white transition hover:bg-emerald-700">
-          {contact.button}
-        </button>
+        <Button>{contact.button}</Button>
       </div>
     </Section>
   );
