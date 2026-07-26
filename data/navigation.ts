@@ -1,30 +1,64 @@
-export const navigation = [
+export type NavigationItem =
+  | {
+      type: "link";
+      title: string;
+      href: string;
+    }
+  | {
+      type: "dropdown";
+      title: string;
+      children: {
+        title: string;
+        description: string;
+        href: string;
+      }[];
+    };
+
+export const navigation: NavigationItem[] = [
   {
+    type: "link",
     title: "صفحه اصلی",
-    href: "/",
+    href: "#home",
   },
   {
-    title: "نیو کونگ‌فو",
-    href: "/kungfu",
+    type: "link",
+    title: "درباره ما",
+    href: "#about",
   },
   {
-    title: "بدنسازی",
-    href: "/bodybuilding",
+    type: "dropdown",
+    title: "باشگاه‌ها",
+    children: [
+      {
+        title: "نیو کونگ‌فو",
+        description: "آموزش، دفاع شخصی و مسابقات",
+        href: "#kungfu",
+      },
+      {
+        title: "بدنسازی",
+        description: "تمرین تخصصی و برنامه حرفه‌ای",
+        href: "#bodybuilding",
+      },
+    ],
   },
   {
+    type: "link",
     title: "مربیان",
-    href: "/coaches",
+    href: "#coaches",
   },
   {
+    type: "link",
     title: "افتخارات",
-    href: "/achievements",
+    href: "#achievements",
   },
   {
+    type: "link",
     title: "گالری",
-    href: "/gallery",
+    href: "#gallery",
   },
   {
+    type: "link",
     title: "تماس با ما",
-    href: "/contact",
+    href: "#contact",
   },
 ];

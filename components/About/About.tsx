@@ -4,7 +4,7 @@ import { Section } from "@/components/ui";
 
 export default function About() {
   return (
-    <Section>
+    <Section id="about">
       <div>
         <p className="mb-3 font-semibold text-emerald-600">درباره ما</p>
 

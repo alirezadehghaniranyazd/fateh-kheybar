@@ -6,7 +6,7 @@ import { Section } from "@/components/ui";
 
 export default function Achievements() {
   return (
-    <Section>
+    <Section id="achievements">
       <SectionTitle
         eyebrow="افتخارات باشگاه"
         title="چرا باشگاه فاتح خیبر؟"

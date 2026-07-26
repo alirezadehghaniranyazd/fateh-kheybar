@@ -7,7 +7,7 @@ import { Section } from "@/components/ui";
 
 export default function Hero() {
   return (
-    <Section className="relative overflow-hidden">
+    <Section id="home" className="relative overflow-hidden">
       <div className="grid min-h-[calc(100vh-72px)] items-center gap-12 md:grid-cols-2">
         {/* متن */}
         <div className="space-y-6 animate-in fade-in slide-in-from-bottom-6 duration-700">

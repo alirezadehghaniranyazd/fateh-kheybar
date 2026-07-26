@@ -4,7 +4,7 @@ import { Button, Section } from "@/components/ui";
 
 export default function Gallery() {
   return (
-    <Section>
+    <Section id="gallery">
       <div className="mb-14 text-center">
         <p className="font-semibold text-emerald-600">گالری باشگاه</p>
 

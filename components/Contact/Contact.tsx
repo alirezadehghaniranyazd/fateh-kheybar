@@ -4,7 +4,7 @@ import ContactCard from "./ContactCard";
 
 export default function Contact() {
   return (
-    <Section>
+    <Section id="contact">
       <div className="mb-14 text-center">
         <p className="font-semibold text-emerald-600">ارتباط با ما</p>
 

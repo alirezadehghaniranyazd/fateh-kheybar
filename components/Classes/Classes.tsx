@@ -1,32 +1,31 @@
-import { classes } from "@/data/classes";
-import ClassCard from "./ClassCard";
 import { Section } from "@/components/ui";
+import ClubSection from "./ClubSection";
+import { clubs } from "@/data/clubs";
 
 export default function Classes() {
   return (
-    <Section>
-      <p className="font-semibold text-emerald-600">کلاس‌های باشگاه</p>
+    <Section id="classes">
+      <p className="font-semibold text-emerald-600">باشگاه‌های ما</p>
 
       <h2 className="mt-3 text-4xl font-black text-slate-900">
-        دوره‌های آموزشی
+        باشگاه‌های تخصصی فاتح خیبر
       </h2>
 
-      <p className="mt-4 text-slate-600">
-        کلاس‌های باشگاه فاتح خیبر برای تمامی رده‌های سنی برگزار می‌شود.
+      <p className="mt-4 max-w-3xl leading-8 text-slate-600">
+        باشگاه ورزشی فاتح خیبر با دو مجموعه تخصصی نیوکونگ‌فو و بدنسازی، محیطی
+        حرفه‌ای برای تمامی سنین فراهم کرده است.
       </p>
 
-      <div className="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {classes.map((item) => (
-          <ClassCard
-            key={item.id}
-            title={item.title}
-            group={item.group}
-            coach={item.coach}
-            schedule={item.schedule}
-            description={item.description}
-          />
-        ))}
-      </div>
+      {clubs.map((club) => (
+        <ClubSection
+          key={club.id}
+          id={club.id}
+          title={club.title}
+          image={club.image}
+          description={club.description}
+          features={club.features}
+        />
+      ))}
     </Section>
   );
 }
