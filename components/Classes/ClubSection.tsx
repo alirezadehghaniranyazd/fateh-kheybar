@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui";
 
 type ClubSectionProps = {
@@ -18,8 +19,13 @@ export default function ClubSection({
 }: ClubSectionProps) {
   return (
     <section id={id} className="grid items-center gap-12 py-12 lg:grid-cols-2">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
-        <Image src={image} alt={title} fill className="object-cover" />
+      <div className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-xl">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover transition duration-500 hover:scale-105"
+        />
       </div>
 
       <div>
@@ -33,14 +39,15 @@ export default function ClubSection({
               key={feature}
               className="flex items-center gap-3 text-slate-700"
             >
-              <span className="h-2 w-2 rounded-full bg-emerald-600"></span>
-
+              <span className="h-2 w-2 rounded-full bg-emerald-600" />
               {feature}
             </li>
           ))}
         </ul>
 
-        <Button className="mt-10">مشاهده بیشتر</Button>
+        <Link href={`/clubs/${id}`}>
+          <Button className="mt-10">مشاهده جزئیات</Button>
+        </Link>
       </div>
     </section>
   );

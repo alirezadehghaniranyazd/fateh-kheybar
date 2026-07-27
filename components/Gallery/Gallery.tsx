@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { gallery } from "@/data/gallery";
 import GalleryImage from "./GalleryImage";
 import { Button, Section } from "@/components/ui";
@@ -24,8 +25,10 @@ export default function Gallery() {
         ))}
       </div>
 
-      <div className="mt-12 text-center">
-        <Button>مشاهده همه تصاویر</Button>
+      <div className="mt-12 flex justify-center">
+        <Link href="/gallery">
+          <Button>مشاهده همه تصاویر</Button>
+        </Link>
       </div>
     </Section>
   );

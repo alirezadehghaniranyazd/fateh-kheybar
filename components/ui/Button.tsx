@@ -20,7 +20,7 @@ export default function Button({
 
   const styles = {
     primary:
-      "bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 hover:shadow-xl shadow-emerald-600/30",
+      "bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 hover:shadow-xl hover:shadow-emerald-600/30",
 
     secondary: "border border-slate-300 text-slate-700 hover:bg-slate-100",
   };
