@@ -1,6 +1,7 @@
 import { contact } from "@/data/contact";
 import { Button, Section } from "@/components/ui";
 import ContactCard from "./ContactCard";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -29,7 +30,9 @@ export default function Contact() {
       </div>
 
       <div className="mt-10 text-center">
-        <Button>{contact.button}</Button>
+        <Link href="/register">
+          <Button>{contact.button}</Button>
+        </Link>
       </div>
     </Section>
   );

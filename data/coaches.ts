@@ -3,7 +3,7 @@ export const coaches = [
     id: 1,
     name: "علی محمد صفری",
     role: "مربی نیو کونگ‌فو",
-    degree: "دان ۶ نیوکنگفو",
+    degree: "دان 8 نیوکنگفو",
     experience: "بیش از ۳۰ سال سابقه",
     image: "/images/coaches/safari.jpg",
     description:

@@ -35,21 +35,37 @@ export default function NavLink({ href, children }: Props) {
   return (
     <a
       href={href}
-      className={`
-        rounded-xl
-        border
-        px-4
-        py-2
-        font-medium
-        transition-all
-        duration-300
+      onClick={(e) => {
+        if (!href.startsWith("#")) return;
 
-        ${
-          active
-            ? "border-emerald-600 bg-emerald-600 text-white shadow-md"
-            : "border-slate-200 bg-white text-slate-700 hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600"
-        }
-      `}
+        e.preventDefault();
+
+        const section = document.querySelector(href);
+
+        if (!section) return;
+
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        window.history.replaceState(null, "", href);
+      }}
+      className={`
+      rounded-xl
+      border
+      px-4
+      py-2
+      font-medium
+      transition-all
+      duration-300
+
+      ${
+        active
+          ? "border-emerald-600 bg-emerald-600 text-white shadow-md"
+          : "border-slate-200 bg-white text-slate-700 hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600"
+      }
+    `}
     >
       {children}
     </a>

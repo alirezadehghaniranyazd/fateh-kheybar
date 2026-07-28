@@ -8,7 +8,7 @@ export const achievements = [
 
   {
     id: 2,
-    title: "دان ۶ نیوکنگفو",
+    title: "دان 8 نیوکنگفو",
     description: "استاد علی محمد صفری",
     icon: "🥋",
   },

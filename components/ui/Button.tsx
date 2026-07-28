@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 type ButtonProps = {
   children: ReactNode;
   variant?: "primary" | "secondary";
+  size?: "sm" | "md";
   onClick?: () => void;
   icon?: ReactNode;
   className?: string;
@@ -11,12 +12,18 @@ type ButtonProps = {
 export default function Button({
   children,
   variant = "primary",
+  size = "md",
   onClick,
   icon,
   className = "",
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-medium transition-all duration-300 hover:scale-105 active:scale-95";
+    "inline-flex items-center justify-center rounded-xl font-medium transition-all duration-300 hover:scale-105 active:scale-95";
+
+  const sizes = {
+    sm: "gap-1 px-3 py-1.5 text-xs",
+    md: "gap-2 px-6 py-3 text-base",
+  };
 
   const styles = {
     primary:
@@ -27,8 +34,9 @@ export default function Button({
 
   return (
     <button
+      type="button"
       onClick={onClick}
-      className={`${base} ${styles[variant]} ${className}`}
+      className={`${base} ${sizes[size]} ${styles[variant]} ${className}`}
     >
       {icon}
       {children}

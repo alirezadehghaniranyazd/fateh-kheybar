@@ -15,7 +15,7 @@ export const clubs = [
 
     coach: "علی محمد صفری",
 
-    degree: "دان ۶",
+    degree: "دان 8",
 
     experience: "بیش از ۳۰ سال سابقه آموزش",
 

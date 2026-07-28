@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Logo() {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-1">
       <div className="relative h-11 w-11 overflow-hidden rounded-full">
         <Image
           src="/images/logo/logo.jpg"
@@ -13,7 +13,7 @@ export default function Logo() {
       </div>
 
       <div>
-        <h1 className="text-lg font-bold text-slate-900">
+        <h1 className="whitespace-nowrap text-lg font-bold text-slate-900">
           باشگاه ورزشی فاتح خیبر
         </h1>
 
